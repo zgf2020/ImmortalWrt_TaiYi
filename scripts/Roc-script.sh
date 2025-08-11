@@ -1,6 +1,6 @@
 # 固件名称 & 编译署名
 sed -i "s/hostname='.*'/hostname='ImmortalWrt'/g" package/base-files/files/bin/config_generate
-sed -i "s/(\(luciversion || ''\))/(\1) + (' \/ Built by ImmortalWrt')/g" feeds/luci/modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js
+sed -i "s/(\(luciversion || ''\))/(\1)/g" feeds/luci/modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
